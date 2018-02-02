@@ -1,0 +1,23 @@
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin gradient-text {
+    //sets a background image and then sets color of text to transparent
+    background-image: linear-gradient(to right, 
+    $color-primary-light, 
+    $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
